@@ -2,17 +2,22 @@ export default {
 	title: "light",
 
 	colors: {
-		primary: "#F2F2F2",
-		secondary: "#FFF",
-		tertiary: "#FE3B17",
+		bgPrimary: "#f2f2f2",
+		bgSecondary: "#D9D9D9",
+		bgTertiary: "#FFF",
+		bgFourth: "#FE3B17",
 
-		white: "#000",
-		black: "#FFF",
-		gray: "#BFBFBF",
+		hoverPrimary: "#ed2500",
+		hoverSecondary: "#d4d4d4",
 
-		success: "#03BB85",
-		info: "#3B5998",
-		warning: "#FF6961",
+		textPrimary: "#ed2500",
+		textSecondary: "#595959",
+		textTertiary: "#000",
+		textFourth: "#FE3B17",
+
+		success: "#8cff2d",
+		info: "#39909F",
+		warning: "#FD9900",
 	},
 
 };

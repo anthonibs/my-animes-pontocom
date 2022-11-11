@@ -1,5 +1,4 @@
 // Esse tipo de arquivo é para sobrescrever
-
 import "styled-components";
 
 // Estamos agora atribuindo nossa própria tipagem no styled-components
@@ -8,13 +7,18 @@ declare module "styled-components" {
         title: string;
 
         colors: {
-            primary: string;
-            secondary: string;
-            tertiary: string;
+            bgPrimary: string;
+            bgSecondary: string;
+            bgTertiary: string;
+            bgFourth: string;
 
-            white: string;
-            black: string;
-            gray: string;
+            hoverPrimary: string;
+            hoverSecondary: string;
+
+            textPrimary: string;
+            textSecondary: string;
+            textTertiary: string;
+            textFourth: string;
 
             success: string;
             info: string;

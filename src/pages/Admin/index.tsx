@@ -14,6 +14,7 @@ import { BsEyeSlashFill, BsEyeFill } from "react-icons/bs";
 
 import LogoAdmin from "../../assets/logo-ponto-animes-admin-01.svg";
 import { useState } from "react";
+import { useAuth } from "../../hooks/auth";
 
 const Admin: React.FC = () => {
 
@@ -25,6 +26,8 @@ const Admin: React.FC = () => {
 	const [user, setUser] = useState<string>("");
 	const [password, setPassword] = useState<string>("");
 	const [isChecked, setIsChecked] = useState<boolean>(false);
+
+	const { signIn } = useAuth();
 
 	const handlerShowHidden = () => {
 		if (displayPassword.changeIcon !== true) {
@@ -66,7 +69,7 @@ const Admin: React.FC = () => {
 					<BackgroundImage />
 
 					<LoginForm>
-						<form>
+						<form onSubmit={() => signIn(user, password)}>
 							<h2>Painel de Login</h2>
 							<fieldset>
 								<input
@@ -115,7 +118,7 @@ const Admin: React.FC = () => {
 			</MainLogin>
 
 			<FooterLogin>
-				© 2022 Animes.com ❤️ Desenvolvido pelo <a href="https://github.com/anthonibs"> anthonibs</a> com muito carinho e aprendizado.
+				© 2022 Animes.com ❤️ Desenvolvido pelo <a href="https://github.com/anthonibs">anthonibs</a> com muito carinho e aprendizado.
 			</FooterLogin>
 		</AdminContainer>
 	);
