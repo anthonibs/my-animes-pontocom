@@ -1,12 +1,19 @@
 import { Route, Routes } from "react-router-dom";
-import Anime from "../pages/Anime";
+import LayoutDefault from "../components/LayoutDefault";
+import Animes from "../pages/Animes";
 import Dashboard from "../pages/Dashboard/Index";
+import NaoEncontrado from "../pages/NaoEncontrado";
+import Users from "../pages/Users";
 
 const AppRoutes: React.FC = () => (
-	<Routes>
-		<Route path="/" element={<Dashboard />} />
-		<Route path="/anime" element={<Anime />} />
-	</Routes>
+	<LayoutDefault>
+		<Routes>
+			<Route path="/" element={<Dashboard />} />
+			<Route path="animes" element={<Animes />} />
+			<Route path="usuarios" element={<Users />} />
+			<Route path="*" element={<NaoEncontrado />} />
+		</Routes>
+	</LayoutDefault>
 );
 
 
