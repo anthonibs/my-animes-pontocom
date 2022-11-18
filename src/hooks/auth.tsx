@@ -30,6 +30,7 @@ const AuthProvider: React.FC<IAuthProviderProps> = (children) => {
 	});
 
 
+
 	const [data, setData] = useState<IUsersProps[]>([]);
 	const loadRegisteredUsers = async () => {
 		try {
@@ -53,7 +54,6 @@ const AuthProvider: React.FC<IAuthProviderProps> = (children) => {
 			}
 		});
 	};
-
 
 	const signOut = () => {
 		localStorage.removeItem("@my-animes:logged");

@@ -12,24 +12,30 @@ import {
 
 import { BsEyeSlashFill, BsEyeFill } from "react-icons/bs";
 
-import LogoAdmin from "../../assets/logo-ponto-animes-admin-01.svg";
 import { useState } from "react";
+
+import LogoAdmin from "../../assets/logo-ponto-animes-admin-01.svg";
 import { useAuth } from "../../hooks/auth";
 
-const Admin: React.FC = () => {
+
+
+const Admin = () => {
 
 	const [displayPassword, setDisplayPassword] = useState({
 		changeIcon: false,
 		type: "password"
 	});
 
-	const [user, setUser] = useState<string>("");
+	const [email, setEmail] = useState<string>("");
 	const [password, setPassword] = useState<string>("");
 	const [isChecked, setIsChecked] = useState<boolean>(false);
 
 	const { signIn } = useAuth();
 
-	const handlerShowHidden = () => {
+
+
+	// Exibe e esconde a senha na tela do usuário;
+	const handlerShowHidden = (): void => {
 		if (displayPassword.changeIcon !== true) {
 			setDisplayPassword({
 				changeIcon: true,
@@ -43,14 +49,13 @@ const Admin: React.FC = () => {
 		}
 	};
 
-	const checkedRemember = () => {
+	const checkedRemember = (): void => {
 		if (isChecked !== true) {
 			setIsChecked(true);
 		} else {
 			setIsChecked(false);
 		}
 	};
-
 
 
 	return (
@@ -69,15 +74,17 @@ const Admin: React.FC = () => {
 					<BackgroundImage />
 
 					<LoginForm>
-						<form onSubmit={() => signIn(user, password)}>
+						<form
+							onSubmit={() => signIn(email, password)}
+						>
 							<h2>Painel de Login</h2>
 							<fieldset>
 								<input
 									type="text"
 									id="user"
-									value={user}
-									onChange={(e) => setUser(e.target.value)}
-									required
+									value={email}
+									onChange={(e) => setEmail(e.target.value)}
+
 								/>
 								<label htmlFor="user">E-mail</label>
 							</fieldset>
@@ -87,7 +94,7 @@ const Admin: React.FC = () => {
 									id="password"
 									value={password}
 									onChange={(e) => setPassword(e.target.value)}
-									required
+
 								/>
 								<label htmlFor="password">Senha</label>
 								<span onClick={handlerShowHidden}>

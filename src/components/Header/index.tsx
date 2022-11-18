@@ -20,6 +20,7 @@ const Header: React.FC = () => {
 		<HeaderContainer>
 			<Container>
 
+				<BsBellSlashFill />
 
 				<BoxProfile>
 					<Notification>
