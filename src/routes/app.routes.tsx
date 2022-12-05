@@ -5,16 +5,18 @@ import Dashboard from "../pages/Dashboard/Index";
 import NaoEncontrado from "../pages/NaoEncontrado";
 import Users from "../pages/Users";
 
-const AppRoutes: React.FC = () => (
-	<LayoutDefault>
-		<Routes>
-			<Route path="/" element={<Dashboard />} />
-			<Route path="animes" element={<Animes />} />
-			<Route path="usuarios" element={<Users />} />
-			<Route path="*" element={<NaoEncontrado />} />
-		</Routes>
-	</LayoutDefault>
-);
+const AppRoutes = () => {
+	
+	return (
+		<LayoutDefault>
+			<Routes>
+				<Route path="/" element={<Dashboard />} />
+				<Route path="animes" element={<Animes />} />
+				<Route path="usuarios" element={<Users />} />
+				<Route path="*" element={<NaoEncontrado />} />
+			</Routes>
+		</LayoutDefault >);
+};
 
 
 export default AppRoutes;

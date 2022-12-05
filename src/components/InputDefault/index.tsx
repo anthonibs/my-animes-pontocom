@@ -1,27 +1,35 @@
-import {
-
-} from "./styles";
+import { InputContainer } from "./styles";
 
 
 interface IProps {
 	label: string;
 	type: string;
 	placeholder: string;
-	required: boolean;
-	tamanho: string;
+	required?: boolean;
+	value?: string;
+	onChange?: React.ChangeEventHandler<HTMLInputElement>;
 }
 
-const InputDefault = ({ label, type, placeholder, required, tamanho }: IProps) => {
+const InputDefault = ({
+	label,
+	type,
+	placeholder,
+	required,
+	value,
+	onChange }: IProps) => {
+
 	return (
-		<div>
+		<InputContainer >
 			<label htmlFor={label}>{label}</label>
 			<input
 				id={label}
 				type={type}
 				placeholder={placeholder}
+				value={value}
+				onChange={onChange}
 				required={required}
 			/>
-		</div>
+		</InputContainer>
 	);
 };
 

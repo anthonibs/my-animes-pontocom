@@ -3,26 +3,34 @@
     {
       "id": "1",
       "name": "Naruto Uzumaki",
-      "email": "naruto@konoha.kh",
+      "email": "naruto_uzumaki@konoha.kh",
       "password": "123456",
-      "image": "https://i.postimg.cc/Y9Zb9vV3/image.png",
-      "permission": "admin"
+      "image": "https://i.postimg.cc/cCG799t4/naruto-39-1200x900.jpg",
+      "permission": "Admin"
     },
     {
       "id": "2",
-      "name": "Sasuke Uchiha",
-      "email": "sasuke@konoha.kh",
-      "password": "3210",
-      "image": "https://i.postimg.cc/FRL0TDWy/Sasuke.webp",
-      "permission": "admin"
+      "name": "Zabuza Munochi",
+      "email": "zabuza@konoha.kh",
+      "password": "abc123",
+      "image": "https://i.postimg.cc/xT489kgL/ad5271fcd1e919482c6a8910a350fb49.jpg",
+      "permission": "Admin"
     },
     {
       "id": "3",
-      "name": "Zabuza Momochi",
-      "email": "momochi@nevoa.nv",
-      "password": "abcd",
-      "image": "https://i.postimg.cc/63jFh6P2/Zabuza.webp",
-      "permission": "employee"
+      "name": "Hotaru Katsuragi",
+      "email": "hotaru@tsuchigumo.tch",
+      "password": "hotaru",
+      "image": "https://i.postimg.cc/kGdr3YJh/Hotaru.png",
+      "permission": "Funcionário"
+    },
+    {
+      "id": "E-991-AD91322-qq3",
+      "name": "Goblin Slayer",
+      "email": "killer_goblin@email.com",
+      "password": "globin123",
+      "permission": "Funcionário",
+      "image": ""
     }
   ],
   "banner": [

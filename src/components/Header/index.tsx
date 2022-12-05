@@ -20,8 +20,6 @@ const Header: React.FC = () => {
 		<HeaderContainer>
 			<Container>
 
-				<BsBellSlashFill />
-
 				<BoxProfile>
 					<Notification>
 						<BsBellFill size={18} className="iconColor" />

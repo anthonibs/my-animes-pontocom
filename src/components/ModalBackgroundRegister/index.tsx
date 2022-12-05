@@ -3,11 +3,12 @@ import { ModalContainer } from "./styles";
 
 interface IModalBgRegister {
 	children: React.ReactNode;
+	isOpenModal: boolean;
 }
 
-const ModalBackgroundRegister = ({ children }: IModalBgRegister) => {
+const ModalBackgroundRegister = ({ children, isOpenModal }: IModalBgRegister) => {
 	return (
-		<ModalContainer>
+		<ModalContainer isOpenModal={isOpenModal}>
 			{children}
 		</ModalContainer>
 	);

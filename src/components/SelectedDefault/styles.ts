@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
-
-export const InputContainer = styled.fieldset`
+export const SelectedContainer = styled.fieldset`
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -12,13 +11,14 @@ export const InputContainer = styled.fieldset`
         font-size: 1rem;
     }
 
-    input {
+    select {
         height: 35px;
         color: ${props => props.theme.colors.textPrimary};
         padding: .325rem;
         border: 1px solid ${props => props.theme.colors.bgSecondary};
         outline: none;
         border-radius: 4px;
+        background: ${props => props.theme.colors.bgTertiary};
         transition: outline .15s ease-out;
         
         
@@ -28,6 +28,10 @@ export const InputContainer = styled.fieldset`
 
         &:focus {
             outline: 2px solid ${props => props.theme.colors.bgFourth};
+        }
+
+        option {
+            background: ${props => props.theme.colors.bgTertiary};
         }
     }
 `;
