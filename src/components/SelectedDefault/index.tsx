@@ -4,15 +4,22 @@ interface ISelectedProps {
 	label: string;
 	standardMessage: string;
 	optionList: string[];
-	value: string;
-	onChange: React.ChangeEventHandler<HTMLSelectElement>;
+	required?: boolean;
+	value?: string;
+	onChange?: React.ChangeEventHandler<HTMLSelectElement>;
 }
 
-const SelectedDefault = ({ label, standardMessage, optionList, value, onChange }: ISelectedProps) => {
+const SelectedDefault = ({ label, standardMessage, optionList, value, onChange, required }: ISelectedProps) => {
 	return (
 		<SelectedContainer>
 			<label htmlFor={label}>{label}</label>
-			<select name={label} id={label} value={value} onChange={onChange}>
+			<select
+				name={label}
+				id={label}
+				value={value}
+				onChange={onChange}
+				required={required}
+			>
 				<option value="">{standardMessage}</option>
 				{optionList.map((option: string) => (
 					<option key={option} value={option}>{option}</option>

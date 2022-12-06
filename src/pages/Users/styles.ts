@@ -86,7 +86,7 @@ export const TableBodyRow = styled.tr`
 
     &:hover {
         opacity: 1;
-        transform: translateX(10px);
+        transform: translateX(4px);
     }
 `;
 
@@ -98,7 +98,7 @@ export const TableBodyColumn = styled.td`
     padding: 0 .325rem;
     vertical-align: middle;
     color: ${props => props.theme.colors.textSecondary};
-
+  
     > img {
         display: block;
         object-fit: cover;
@@ -112,6 +112,7 @@ export const TableBodyColumn = styled.td`
         text-align: center;
     }
 
+
     > div {
         display: flex;
         align-items: center;
@@ -123,6 +124,7 @@ export const TableBodyColumn = styled.td`
             background-color: transparent;
             cursor: pointer;
             opacity: .6;
+            padding: 4px 6px;
             transition: opacity .2s ease-in-out;
 
             &:hover {

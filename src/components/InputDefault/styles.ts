@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-
 export const InputContainer = styled.fieldset`
     display: flex;
     flex-direction: column;
     gap: 4px;
     flex: 1;
+    
 
     label {
         color: ${props => props.theme.colors.textPrimary};

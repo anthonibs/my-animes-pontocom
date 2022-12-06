@@ -6,8 +6,8 @@ import {
 	MenuIcon
 } from "./styles";
 
-import LogoAnimesGrande from "../../assets/logo-ponto-animes-admin-01.svg";
-import LogoAnimesCurto from "../../assets/logo-ponto-animes-admin-02.svg";
+import LogoAnimesGrande from "../../assets/svg/logo-ponto-animes-admin-01.svg";
+import LogoAnimesCurto from "../../assets/svg/logo-ponto-animes-admin-02.svg";
 import { NavLink } from "react-router-dom";
 
 import { BsArrowBarLeft, BsArrowBarRight, BsCollectionPlayFill, BsFileEarmarkImageFill, BsFileEarmarkPlayFill, BsFileEarmarkTextFill, BsFillDiagram3Fill, BsInfoLg, BsLayersFill } from "react-icons/bs";

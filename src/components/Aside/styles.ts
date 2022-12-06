@@ -5,6 +5,7 @@ export const AsideContainer = styled.aside`
     grid-area: ASIDE;
     background-color: ${props => props.theme.colors.bgSecondary};
     transition: all 15s ease-in-out;
+    z-index: 1000;
 
     > div {
         height: 50px;

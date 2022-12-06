@@ -3,7 +3,7 @@ import { InputContainer } from "./styles";
 
 interface IProps {
 	label: string;
-	type: string;
+	type?: string;
 	placeholder: string;
 	required?: boolean;
 	value?: string;
@@ -19,10 +19,10 @@ const InputDefault = ({
 	onChange }: IProps) => {
 
 	return (
-		<InputContainer >
+		<InputContainer>
 			<label htmlFor={label}>{label}</label>
 			<input
-				id={label}
+				id={`input-${label.toLowerCase()}`}
 				type={type}
 				placeholder={placeholder}
 				value={value}

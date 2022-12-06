@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const HeaderContainer = styled.header`
     grid-area: HEADER;
     background-color: ${props => props.theme.colors.bgPrimary};
+    z-index: 1000
 `;
 
 export const Container = styled.div`
@@ -62,7 +63,6 @@ export const Profile = styled.div`
     gap: .625rem;
     border-radius: 5px;
     padding: 0 .625rem;
-    
     transition: all .4s ease-in-out;
 
     &:hover {
@@ -70,10 +70,11 @@ export const Profile = styled.div`
     }
     
     > span {
+        color: ${props => props.theme.colors.textSecondary}  
         display: block;
         font-size: .9rem;
         line-height: normal;
-        color: ${props => props.theme.colors.textSecondary}  
+        user-select: none;
     }
 
     > img {

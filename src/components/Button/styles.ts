@@ -8,7 +8,6 @@ interface IProps {
 export const ButtonCustom = styled.button<IProps>`
     padding: .325rem .625rem;
     height: 40px;
-    width: 80px;
     color: ${props => props.theme.colors.textTertiary};
     border: 1px solid ${props => props.theme.colors.bgSecondary};
     outline: none;
@@ -25,6 +24,7 @@ export const ButtonCustom = styled.button<IProps>`
     }
         
     &:disabled {
+        pointer-events: none;
         background-color: ${props => props.theme.colors.bgSecondary};
         color: ${props => props.theme.colors.textSecondary};
     }
