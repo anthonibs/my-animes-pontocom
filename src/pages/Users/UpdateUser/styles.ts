@@ -26,6 +26,8 @@ export const Container = styled.section`
     color: ${props => props.theme.colors.textFourth};
     font-weight: bold;
     transition: color .3s ease-in;
+    display: inline-block;
+    margin-bottom: 1rem;
 
     > span {
       display: inline-flex;

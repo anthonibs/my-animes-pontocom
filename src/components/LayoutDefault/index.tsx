@@ -14,7 +14,7 @@ const LayoutDefault: React.FC<IBoxProps> = ({ children }) => {
 
 	return (
 		<LayoutGrid>
-			<Header/>
+			<Header />
 			<Aside />
 			<Content>
 				{children}

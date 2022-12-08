@@ -1,44 +1,12 @@
 {
   "users": [
     {
-      "name": "Naruto Uzumaki",
-      "email": "naruto_uzumaki@email.kh",
-      "password": "123456",
-      "permission": "Administração",
-      "urlImage": "https://nerdhits.com.br/wp-content/uploads/2022/10/naruto-39-1200x900.jpg",
-      "id": "123"
-    },
-    {
-      "id": "E-df2-48A449A-l2j",
-      "name": "Culpa vero blanditi",
-      "email": "bahurebuk@mailinator.com",
-      "password": "Dolorem elit ea vol",
-      "permission": "Administração",
-      "urlImage": null
-    },
-    {
-      "id": "E-151-BB25738-wtl",
-      "name": "Eu placeat neque ha",
-      "email": "kocy@mailinator.com",
-      "password": "Voluptatum dolorem a",
-      "permission": "Funcionário",
-      "urlImage": null
-    },
-    {
       "id": "E-8-9437E6E-c90",
       "name": "Sasuke Uchiha",
       "email": "sasuke@email.com",
       "password": "3210",
       "permission": "Funcionário",
       "urlImage": "https://upload.wikimedia.org/wikipedia/pt/0/02/Sasukereup.jpg"
-    },
-    {
-      "id": "E-1f8-415C9A4-ne",
-      "name": "Molestiae temporibus",
-      "email": "pasy@mailinator.com",
-      "password": "Voluptas rerum odio ",
-      "permission": "Funcionário",
-      "urlImage": ""
     },
     {
       "id": "E-5d-5B94352-ayj",
@@ -49,12 +17,52 @@
       "urlImage": "https://consorcioeldorado.com.br/wp-content/uploads/2021/02/vw-tcross-consorcio-eldorado.jpg"
     },
     {
-      "id": "E-578-AD946FC-7bq",
-      "name": "Harum sit vero harum",
-      "email": "koca@mailinator.com",
-      "password": "Sunt delectus sit ",
+      "name": "Naruto Uzumaki",
+      "email": "aaaaa@email.com",
+      "password": "12345455",
       "permission": "Funcionário",
-      "urlImage": ""
+      "urlImage": "",
+      "id": "E-1ba-885ED38-ci5"
+    },
+    {
+      "id": "E-af4-280E404-kcb",
+      "name": "Porro similique ab e",
+      "email": "rexykyroso@mailinator.com",
+      "password": "Voluptatem deleniti ",
+      "permission": "Administração",
+      "urlImage": "Culpa delectus dolo"
+    },
+    {
+      "name": "Iure blanditiis quo ",
+      "email": "pepecuxev@mailinator.com",
+      "password": "Facere excepturi fug",
+      "permission": "Administração",
+      "urlImage": "Molestiae incididunt",
+      "id": "E-37c-3640AD4-gu"
+    },
+    {
+      "name": "Laura Martins",
+      "email": "vemiman@mailinator.com",
+      "password": "Reprehenderit iure m",
+      "permission": "Administração",
+      "urlImage": "Aut quia ut voluptas",
+      "id": "E-256-F44D61A-4w5"
+    },
+    {
+      "name": "Nulla anim dicta ull",
+      "email": "vimewe@mailinator.com",
+      "password": "Quidem enim dolor po",
+      "permission": "Administração",
+      "urlImage": "Duis vero ut dolorem",
+      "id": "E-01-B3FA36-6o4"
+    },
+    {
+      "id": "E-518-150A342-nb5",
+      "name": "Facere ea odio et qu",
+      "email": "kesutivyx@mailinator.com",
+      "password": "Impedit Nam est qui",
+      "permission": "Administração",
+      "urlImage": "Accusantium quod dol"
     }
   ],
   "banner": [

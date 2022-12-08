@@ -16,15 +16,17 @@ const animate = keyframes`
 `;
 
 export const Container = styled.section`
+  animation: ${animate} .6s ease-in;
   height: 100%;
-  width: 100%;
   padding: 24px;
-  animation:  ${animate} .6s ease-in;
+  width: 100%;
 
   > a {
-    font-size: 1.2rem;
     color: ${props => props.theme.colors.textFourth};
+    display: inline-block;
+    font-size: 1.2rem;
     font-weight: bold;
+    margin-bottom: 1rem;
     transition: color .3s ease-in;
 
     > span {
@@ -36,36 +38,4 @@ export const Container = styled.section`
       color: ${props => props.theme.colors.hoverPrimary};
     }
   }
-`;
-
-
-
-export const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 800px;
-  margin-top: 2rem;
-  background: ${props => props.theme.colors.bgPrimary};
-  padding: 1rem;
-
-
-  h2 {
-    font-size: 1.6rem;
-    color: ${props => props.theme.colors.textPrimary};
-  }
-`;
-
-export const FormContainer = styled.div`
-  margin-top: 2rem;
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-`;
-
-export const ButtonGroup = styled.div`
-  display: flex;
-  margin-top: 1.6rem;
-  gap: .825rem;
-  justify-content: flex-end;
 `;

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 import imageDefault from "../../assets/image/sem-imagem-padrao.png";
 
+import { BsArrowLeft } from "react-icons/bs";
 
 import {
 	UsersContainer,
@@ -31,27 +32,32 @@ interface IUsersProps {
 
 const Users = () => {
 	const [listUsers, setListUsers] = useState<IUsersProps[]>([]);
+	const [orderBy, setOrderBy] = useState("asc");
 
+	
 	const loadingUsers = async () => {
-		const response: Response = await fetch("http://localhost:5500/users");
+		const response: Response = await fetch(`http://localhost:5500/users?_sort=name&_order=${orderBy}`);
 		const data: IUsersProps[] = await response.json();
 		setListUsers(data);
 	};
-
 
 	const handleRemoveUser = async (idRemove: string) => {
 		const response: Response = await fetch(`http://localhost:5500/users/${idRemove}`, {
 			method: "DELETE"
 		});
+
 		return response;
 	};
+
+	function handleToggleOrderBy() {
+		setOrderBy((prevState) => prevState === "asc" ? "desc" : "asc");
+	}
 
 
 	useEffect(() => {
 		loadingUsers();
-	}, []);
+	}, [orderBy]);
 
-	console.log(listUsers);
 
 	return (
 		<UsersContainer>
@@ -73,8 +79,14 @@ const Users = () => {
 								<TableHeadColumn>
 									Perfil
 								</TableHeadColumn>
-								<TableHeadColumn>
+								<TableHeadColumn orderBy={orderBy}>
 									Nome
+									<button 
+										onClick={handleToggleOrderBy}
+									>	
+										{orderBy === "asc" ? <span>A-Z</span> : <span>Z-A</span>}
+										<BsArrowLeft className="arrow-custom"/>
+									</button>
 								</TableHeadColumn>
 								<TableHeadColumn>
 									Email

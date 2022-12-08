@@ -1,9 +1,13 @@
 import styled, { keyframes } from "styled-components";
 
+interface IPropsTable {
+    orderBy?: string;
+}
+
 // Animação Tabela de Usuários;
 const animate = keyframes`
     0% {
-        transform: translateX(-100px);
+        transform: rotateX(90deg);
         opacity: 0;
     }
     50% {
@@ -11,11 +15,25 @@ const animate = keyframes`
     }
 
     100% {
-        transform: translateX(0px);
+        transform: rotateX(0deg);;
         opacity: 1;
     }
 `;
 
+
+const animateOpacity = keyframes`
+    0% {
+      opacity: 0;
+    }
+    
+    50% {
+      opacity: .3 ;
+    }
+
+    100% {
+      opacity: 1;
+    }
+`;
 
 export const UsersContainer = styled.section`
     position: relative;
@@ -68,8 +86,27 @@ export const TableHead = styled.thead`
     border-bottom: 2px solid blue;
 `;
 
-export const TableHeadColumn = styled.th`
+export const TableHeadColumn = styled.th<IPropsTable>`
     padding: .625rem;
+    font-size: 1rem;
+
+    button {
+        display: inline-flex;
+        align-items: center;
+        border: none;
+        background: transparent;
+        outline: none;
+        margin-left: 25%;
+        cursor: pointer;
+        padding: 2px;
+        color: ${({theme}) => theme.colors.textTertiary};
+
+        .arrow-custom {
+            margin-left: 2px;
+            transform: ${({ orderBy }) => orderBy === "asc" ? " rotate(90deg)" : "rotate(270deg)"};
+            transition: transform .2s ease-in;
+        }
+    }
 `;
 
 export const TableRow = styled.tr`
@@ -80,25 +117,25 @@ export const TableRow = styled.tr`
 export const TableBodyRow = styled.tr`
     border-bottom: 2px solid ${props => props.theme.colors.bgPrimary};
     line-height: 45px;
-    opacity: .7;
-    transition: all  .5s ease-in-out;
-    animation:  ${animate} .5s ease;
-
+    transition: all  .5s ease-in;
+    animation:  ${animate} .6s ease-in;
+    color: ${props => props.theme.colors.textSecondary};
+    
     &:hover {
-        opacity: 1;
+        color: ${({theme}) => theme.colors.textTertiary};
         transform: translateX(4px);
     }
 `;
 
-export const TableBody = styled.tbody` 
+export const TableBody = styled.tbody`
     position: relative;
+    animation:  ${animateOpacity} .5s ease-in;
 `;
 
 export const TableBodyColumn = styled.td`
     padding: 0 .325rem;
     vertical-align: middle;
-    color: ${props => props.theme.colors.textSecondary};
-  
+    
     > img {
         display: block;
         object-fit: cover;
@@ -112,12 +149,11 @@ export const TableBodyColumn = styled.td`
         text-align: center;
     }
 
-
     > div {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-        backdrop-filter: grayscale(30%);
+        backdrop-filter: grayscale(30 %);
 
         > button {
             border: none;
@@ -125,12 +161,11 @@ export const TableBodyColumn = styled.td`
             cursor: pointer;
             opacity: .6;
             padding: 4px 6px;
-            transition: opacity .2s ease-in-out;
+            transition: opacity .2s ease-in;
 
             &:hover {
                 opacity: 1;
             }
-
         }
     }
 `;
